@@ -83,7 +83,7 @@ function App() {
           setWeather(res.data)
         })
     }
-  },[lat])
+  },[lat, lon])
 
   const search = evt => {
     if (evt.key === 'Enter'){
