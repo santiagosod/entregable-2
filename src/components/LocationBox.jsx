@@ -15,13 +15,15 @@ const LocationBox = ({weather, dateBuilder, changeMetric, changeBtn, grades, ico
               {Math.round(weather.main.temp)}{grades}
             </div>
 
-          <div className="weather">{weather.weather[0].main}</div>
+          <div className="weather">{weather.weather[0].description}</div>
 
           <div className="button">
             <button className='btn' onClick={changeMetric}>{changeBtn}</button>
           </div>
 
-          <div className="climate-icon"><i className={icon}></i></div>
+          <div className="climate-icon">
+            <img className={icon} src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt="" />
+          </div>
         </div>
         </div>
         ) : ('')}

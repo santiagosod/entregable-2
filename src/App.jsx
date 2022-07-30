@@ -18,28 +18,22 @@ function App() {
   const [lat, setLat] = useState('undefined')
   const [lon, setLon] = useState('undefined')
   const [bg, setBg] = useState('app')
-  const [icon, setIcon] = useState('icons ')
+  const [icon, setIcon] = useState('icons')
 
   useEffect (() => {
     if(typeof weather.main != 'undefined'){
       if(weather.weather[0].main === 'Clouds'){
         setBg('app cloudy')
-        setIcon(icon + 'fa-solid fa-cloud')
       } else if(weather.weather[0].main === 'Rain'){
         setBg('app rain')
-        setIcon(icon + 'fa-solid fa-cloud-showers-heavy')
       } else if(weather.weather[0].main === 'Clear'){
         setBg('app clear')
-        setIcon(icon + "fa-solid fa-sun")
       } else if(weather.weather[0].main === 'Sunny'){
         setBg('app sunny')
-        setIcon(icon + "fa-solid fa-sun")
       } else if(weather.weather[0].main === 'Drizzle'){
         setBg('app drizzle')
-        setIcon(icon + "fa-solid fa-cloud-rain")
       } else if(weather.weather[0].main === 'Mist'){
         setBg('app mist')
-        setIcon(icon +"fa-solid fa-smog")
       }
     }
   }, [weather])
@@ -91,7 +85,6 @@ function App() {
       .then(res => {
         setWeather(res.data)
         setQuery('')
-        console.log(res.data);
       })
     }
   }

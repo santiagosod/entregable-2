@@ -158,16 +158,11 @@ main{
 .icons{
   margin-top: 0.5em;
   font-size: 40px;
-  padding: 0.3em;
   border-radius: 5px;
 
   background-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
+  fill: red;
   box-shadow: 2px 3px rgba(0, 0, 0, 0.5);
   text-shadow: 1px 2px rgba(0, 0, 0, 0.5);
 
-}
-
-.fa-clouds{
-  font-size: 40px;
 }
